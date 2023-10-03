@@ -1,0 +1,42 @@
+# largest-of-number-combination
+Get a number and check the last 3 digit  of  a number   and remove any one digit from number and print the largest combination of the gn number
+
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner (System.in);
+        long n = sc.nextInt();
+        long temp=n;//15742
+        long u=n%10;//2
+        long f=n/10;//1574
+        long fu=f%10;//4
+        n=n/100;//157
+        long s=(n*10)+u;//157*10+2=1572
+        n=n/10;//15
+        long t=(n*100)+(fu*10)+u;
+        if(f>s && f>t)
+        {
+            System.out.println(f);
+        }
+        else if(s>f && s>t)
+        {
+            System.out.println(s);
+        }
+        else if(temp==100)
+        {
+            System.out.println("10");
+        }
+        else
+        {
+            System.out.print(t);
+        }
+       
+    }
+}
+
+output :
+15742
+
+1574
